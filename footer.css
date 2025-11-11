@@ -117,12 +117,20 @@
   color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+/* make footer bottom links (Privacy, Terms) white */
+>>>>>>> 20f5c142ae0b233807a05a9761b6cda3ed57cb8e
 .footer-bottom a {
   color: #fff;
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 
+=======
+/* small hover affordance */
+>>>>>>> 20f5c142ae0b233807a05a9761b6cda3ed57cb8e
 .footer-bottom a:hover,
 .contact-list .contact-item a:hover {
   text-decoration: underline;
