@@ -9,15 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link id="style" rel="stylesheet" href="switch.css">
   <title>Clothing Shop</title>
 </head>
 
 <header class="site-header">
   <div class="topbar">
-    <div class="topbar-right">
-      <a href="">Help</a>
-      <span class="sep">|</span>
-      <a href="">Sign In</a>
+    <div class="topbar-right top-dark">
+      <a href="" class="a-white">Help</a>
+      <span class="sep sep-white">|</span>
+      <a href="" class="a-wjite">Sign In</a>
     </div>
   </div>
 
@@ -47,6 +49,12 @@
       <button class="icon-btn" aria-label="Favorite">
         <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
       </button>
+     
+    <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Comută temă">
+      <span class="material-symbols-outlined" id="dark">dark_mode</span>
+      <span class="material-symbols-outlined" id="light">light_mode</span>
+    </button>
+
     </div>
   </nav>
 </header>
@@ -83,5 +91,69 @@
 
   </main>
 
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="brand-link">Clothing Shop</a>
+      <p class="brand-desc">Modern clothing for every day. Quality pieces, fast shipping and friendly service.</p>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="material-symbols-outlined">phone</span>
+          <a href="tel:+40123456789">+40 123 456 789</a>
+        </div>
+        <div class="contact-item">
+          <span class="material-symbols-outlined">email</span>
+          <a href="mailto:hello@clothingshop.com">hello@clothingshop.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="material-symbols-outlined">location_on</span>
+          <span>Str. Exemplu 12, București</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Woman</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">New arrivals</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Payment methods</a></li>
+        <li><a href="#">Size guide</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col newsletter">
+      <h4>Newsletter</h4>
+      <p>Abonează-te pentru oferte și noutăți</p>
+      <form id="newsletter" onsubmit="return false;">
+        <input type="email" name="email" placeholder="Adresa de email" aria-label="Email">
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <div class="social">
+        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+        <a href="#" aria-label="Facebook"  class="social-link">Facebook</a>
+        <a href="#" aria-label="Pinterest" class="social-link">Pinterest</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>© 2025 Clothing Shop. All rights reserved. &nbsp; | &nbsp; <a href="#">Privacy</a> &nbsp; | &nbsp; <a href="#">Terms</a></small>
+  </div>
+</footer>
+
+<script src="theme-toggle.js"></script>
 </body>
 </html>
