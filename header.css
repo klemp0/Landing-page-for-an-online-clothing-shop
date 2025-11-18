@@ -83,7 +83,7 @@ body {
   background:#fff;
 }
 .search input {
-  display: block;   /* înlocuiește orice display:none */
+  display: block;   
   width: 180px;
   border: 0;
   outline: none;
@@ -120,8 +120,93 @@ body {
 .icon-btn:hover,
 .search-btn:hover { color:#000; }
 
-@media (max-width:640px) {
-  .search input { display:none; width:0; }
-  .search { padding:6px; border-radius:20px; }
-  .material-symbols-outlined { font-size:20px; }
+#light{
+  display: none;
 }
+.navbar { position: relative; z-index: 20; }
+
+
+.catalog { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; align-items: center; }
+
+.catalog .has-mega { position: relative; }
+
+.catalog .has-mega {
+  position: static; 
+}
+.mega {
+  position: absolute;                  
+  left: 50%;                     
+  transform: translateX(-60%) translateY(6px);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  z-index: 50;                
+  width: 600px;             
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+
+.has-mega:hover > .mega,
+.has-mega:focus-within > .mega {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0)  translateX(-60%);
+}
+
+
+.mega-inner {
+  background: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  box-sizing: border-box;
+
+  
+  place-items: center;        
+  align-content: center;      
+  min-height: 160px;          
+}
+
+
+.mega-col {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.mega-col a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+
+.mega-col h5 {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.mega-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mega-col li { margin: 8px 0; }
+.mega-col a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+}
+.mega-col a:hover { text-decoration: underline; }
