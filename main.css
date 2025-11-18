@@ -1,6 +1,6 @@
 
 main {
- display: block;               /* flux normal, nu centrat vertical */
+ display: block;              
     margin: 0;
     padding: 0;
     background-color: rgb(219, 219, 219);
@@ -20,7 +20,7 @@ main {
 .back_img img {
      display: block;
     width: 100%;
-    max-width: 1850px; /* modifică această valoare pentru lățimea dorită */
+    max-width: 1850px; 
     margin: 0 auto;
     height: auto;
     filter: brightness(0.6);
@@ -31,8 +31,8 @@ main {
     left: 140px;
     bottom: 180px;
     font-family: "Merriweather", serif;
-    color: #fff;                             /* culoare pe imagine */
-    font-size: 100px;     /* scalează responsiv */  /* contrast pe imagine */
+    color: #fff;                           
+    font-size: 100px; 
     z-index: 2;
 }
 
@@ -40,7 +40,7 @@ main {
     width: calc(100% - 80px);
     max-width: 1500px;
     min-height: 100%;
-    margin-top: -110px;      /* ajustează cât suprapune (măriți/ Micșorați) */
+    margin-top: -110px;    
     margin-bottom: 60px;
     background-color: #fff;
     border-radius: 12px;
@@ -52,7 +52,7 @@ main {
 
 .both{
       display: flex;
-    flex-direction: column; /* <--- face .panel să fie sub .back_img */
+    flex-direction: column; 
     align-items: center;
     gap: 0;
 }
@@ -66,7 +66,7 @@ main {
   padding: 50px;
 }
 
-/* fiecare card */
+
 .panel-item {
   border-radius: 10px;
   overflow: hidden;
@@ -78,14 +78,13 @@ main {
   transition: transform .35s ease;
 }
 
-/* imaginea ocupă întreg cardul păstrând proporțiile */
+
 .panel-item img {
   object-fit: cover;
   display: block;
   transition: transform .35s ease;
 }
 
-/* efect ușor hover */
 .panel-item:hover img {
   transform: scale(1.03);
 }
