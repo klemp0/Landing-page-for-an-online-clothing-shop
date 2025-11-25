@@ -89,6 +89,7 @@ body {
   outline: none;
   background: transparent;
   font-size: 14px;
+  color: white;
 }
 .search-btn {
   border:0;
