@@ -15,3 +15,8 @@ function switchTheme() {
 }
 changeButton.addEventListener("click", switchTheme);
 
+
+const button = document.getElementById('console');
+button.addEventListener('click', function() {
+  console.log("hello");
+});
