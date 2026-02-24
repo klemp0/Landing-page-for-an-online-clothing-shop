@@ -1,41 +1,35 @@
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector("#open-modal-btn");
+const openModalBtn = document.getElementById("nn");
 const closeModalBtn = document.querySelector(".close-btn");
+const okBtn = document.getElementById("ok");
 
-const openModal = function () {
+openModalBtn.addEventListener("click", function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
-};
+});
 
-const closeModal = function () {
+function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-};
+}
 
-// Event listeners
-openModalBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
-
-// Close when clicking outside the modal
 overlay.addEventListener("click", closeModal);
 
-// Optional: Close with the Escape key
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
 });
 
-function signin() {
-const mess = document.getElementById("mess").value;
-const name = document.getElementById("name").value;
-const email=document.getElementById("email").value;
+okBtn.addEventListener("click", function () {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const mess = document.getElementById("mess");
 
-mess.style.display = "block";
-mess.innerHTML=`
-Domnul ${name} va vom contacta pe e-mailul ${email}`;
-
-document.getElementById("ok").close();
-return false;
-}
+  mess.style.display = "block";
+  mess.innerHTML = `
+    Domnul ${name}, veti primi un mesaj de confirmare pe e-mailul ${email}.
+  `;
+});
