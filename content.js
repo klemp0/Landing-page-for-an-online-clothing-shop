@@ -1,28 +1,5 @@
 const head = document.getElementsByClassName("site-header")[0];
 
-const topbar = document.createElement("div");
-topbar.className = "topbar";
-
-const topr = document.createElement("div");
-topr.className = "topbar-right top-dark";
-
-const ahelp = document.createElement("a");
-ahelp.className = "a-white";
-ahelp.href = "#";
-ahelp.innerText = "Help";
-
-const sep = document.createElement("span");
-sep.className = "sep sep-white";
-sep.innerText = "|";
-
-const asign = document.createElement("a");
-asign.className = "a-white";
-asign.href = "#";
-asign.innerText = "Sign In";
-
-topr.append(ahelp, sep, asign);
-topbar.appendChild(topr);
-head.appendChild(topbar);
 
 const nav = document.createElement("nav");
 nav.className = "navbar";

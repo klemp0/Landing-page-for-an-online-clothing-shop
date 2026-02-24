@@ -22,6 +22,7 @@
 
   <body>
     <header class="site-header">
+       <button id="open-modal-btn">Sign In</button> 
     </header>
     <main>
       <div class="both">
@@ -135,6 +136,24 @@
         >
       </div>
     </footer>
+
+<div class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>My Modal Title</h2>
+      <button class="close-btn"></button>
+    </div>
+    <div class="modal-body">
+      <input type="text" placeholder="Name" id="name">
+      <input type="text" placeholder="E-mail" id="email">
+      <button id="ok" onsubmit="return signin()"> Submit </button>
+      <div class="message" id="mess"></div>
+    </div>
+  </div>
+</div>
+<div class="overlay hidden"></div>
+    
+    <script src="form.js"></script>
     <script src="content.js"></script>
     <script src="theme-toggle.js"></script>
   </body>
