@@ -1,28 +1,5 @@
 const head = document.getElementsByClassName("site-header")[0];
 
-const topbar = document.createElement("div");
-topbar.className = "topbar";
-
-const topr = document.createElement("div");
-topr.className = "topbar-right top-dark";
-
-const ahelp = document.createElement("a");
-ahelp.className = "a-white";
-ahelp.href = "#";
-ahelp.innerText = "Help";
-
-const sep = document.createElement("span");
-sep.className = "sep sep-white";
-sep.innerText = "|";
-
-const asign = document.createElement("a");
-asign.className = "a-white";
-asign.href = "#";
-asign.innerText = "Sign In";
-
-topr.append(ahelp, sep, asign);
-topbar.appendChild(topr);
-head.appendChild(topbar);
 
 const nav = document.createElement("nav");
 nav.className = "navbar";
@@ -43,24 +20,24 @@ const catalogData = {
   men: {
     Shoes: ["All Shoes", "Sneakers", "Shoes", "Sport"],
     Clothing: ["All Clothing", "Hoodies", "Tops & T-shirts", "Accessories"],
-    Sport: ["Running", "Football", "Basketball", "Training & Gym"]
+    Sport: ["Running", "Football", "Basketball", "Training & Gym"],
   },
   woman: {
     Shoes: ["All Shoes", "Sneakers", "Shoes", "Sport"],
     Clothing: ["All Clothing", "Hoodies", "Leggings", "Tops & T-shirts"],
-    Sport: ["Training & Gym", "Running", "Tennis", "Football"]
+    Sport: ["Training & Gym", "Running", "Tennis", "Football"],
   },
   kids: {
     Shoes: ["All Shoes", "Sneakers", "Shoes", "Sport"],
     Clothing: ["All Clothing", "Tops & T-Shirts", "Tracksuits", "Jackets"],
-    Sport: ["Running", "Football", "Basketball", "Physical Education"]
-  }
+    Sport: ["Running", "Football", "Basketball", "Physical Education"],
+  },
 };
 
 const catalogSections = [
   { title: "Men", key: "men" },
   { title: "Woman", key: "woman" },
-  { title: "Kids", key: "kids" }
+  { title: "Kids", key: "kids" },
 ];
 
 const catalog = document.createElement("ul");
@@ -85,14 +62,14 @@ function createMegaMenu(data) {
 
     const ul = document.createElement("ul");
 
-    items.forEach(text => {
+    for (let i = 0; i < items.length; i++) {
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = "#";
-      a.innerText = text;
+      a.innerText = items[i];
       li.appendChild(a);
       ul.appendChild(li);
-    });
+    }
 
     col.append(h5, ul);
     megaInner.appendChild(col);
@@ -102,7 +79,7 @@ function createMegaMenu(data) {
   return mega;
 }
 
-catalogSections.forEach(section => {
+catalogSections.forEach((section) => {
   const li = document.createElement("li");
   li.className = "has-mega";
 
