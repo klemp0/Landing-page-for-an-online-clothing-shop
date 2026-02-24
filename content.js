@@ -134,3 +134,8 @@ dark.innerText = "dark_mode";
 
 themeBtn.append(light, dark);
 navAction.appendChild(themeBtn);
+
+
+const signInBtn = document.getElementById("nn");
+
+navAction.appendChild(signInBtn);

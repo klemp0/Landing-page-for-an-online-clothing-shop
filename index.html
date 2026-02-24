@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
@@ -22,7 +23,7 @@
 
   <body>
     <header class="site-header">
-       <button id="open-modal-btn">Sign In</button> 
+      <button id="nn"><span class="material-symbols-outlined">account_circle</span> </button>
     </header>
     <main>
       <div class="both">
@@ -140,19 +141,20 @@
 <div class="modal hidden">
   <div class="modal-content">
     <div class="modal-header">
-      <h2>My Modal Title</h2>
-      <button class="close-btn"></button>
+      <h2>Sign In</h2>
+      <button class="close-btn">X</button>
     </div>
     <div class="modal-body">
       <input type="text" placeholder="Name" id="name">
       <input type="text" placeholder="E-mail" id="email">
-      <button id="ok" onsubmit="return signin()"> Submit </button>
+      <button id="ok">Submit</button>
       <div class="message" id="mess"></div>
     </div>
   </div>
 </div>
+
 <div class="overlay hidden"></div>
-    
+
     <script src="form.js"></script>
     <script src="content.js"></script>
     <script src="theme-toggle.js"></script>
