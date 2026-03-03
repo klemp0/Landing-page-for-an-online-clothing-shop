@@ -34,7 +34,7 @@ okBtn.addEventListener("click", function () {
 okBtn.addEventListener("click", function(){
 
   let userData ={
-    name: name.value,
+    name: name.value.toUpperCase(),
     email: email.value
   };
 
