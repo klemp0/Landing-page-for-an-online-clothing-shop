@@ -47,7 +47,7 @@ okBtn.addEventListener("click", function(){
 });
 
 window.addEventListener("load", function(){
-let savedData = JSON.parse(this.localStorage.getItem("userData"));
+let savedData = JSON.parse(localStorage.getItem("userData"));
 
 if(savedData) {
   name.value = savedData.name;
