@@ -131,23 +131,6 @@ main {
     padding-bottom: 100px;
 }
 
-
-.back_img{
-  position: relative;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-}
-
-.back_img img {
-     display: block;
-    width: 100%;
-    max-width: 1850px; 
-    margin: 0 auto;
-    height: auto;
-    filter: brightness(0.6);
-}
-
 .title{
     position: absolute;
     left: 140px;
@@ -227,10 +210,6 @@ main {
 }
 .belt{
     width: 400px;
-}
-
-.catalog-list{
-
 }
 
 .navbar { position: relative; z-index: 20; }
